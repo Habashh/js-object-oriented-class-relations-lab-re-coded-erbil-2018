@@ -18,8 +18,7 @@ trips() {
   }
   passengers() {
     return this.trips().map( trip=> {
-      return trip.passenger();
-    });
+      return trip.passenger();    });
   }
 }
 
@@ -33,8 +32,7 @@ class Passenger  {
 
 trips() {
     return store.trips.filter(trip=> {
-      return trip.passengerId == this.id;
-          });
+      return trip.passengerId == this.id;          });
   }
   drivers() {
     return this.trips().map(trip => {
