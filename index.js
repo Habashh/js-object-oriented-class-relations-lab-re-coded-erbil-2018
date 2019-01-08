@@ -12,12 +12,12 @@ class Driver {
     store.drivers.push(this);
 }
 trips() {
-    return store.trips.filter( trip => {
+    return store.trips.filter( trip=> {
       return trip.driverId == this.driverId;
     });
   }
   passengers() {
-    return this.trips().map( trip => {
+    return this.trips().map( trip=> {
       return trip.passenger();
     });
   }
@@ -33,7 +33,7 @@ class Passenger  {
 
 trips() {
     return store.trips.filter(trip=> {
-      return trip.passengerId === this.id;
+      return trip.passengerId == this.id;
           });
   }
   drivers() {
