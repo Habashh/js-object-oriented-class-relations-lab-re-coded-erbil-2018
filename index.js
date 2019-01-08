@@ -42,20 +42,21 @@ trips() {
     });
   }
 }
-class Trip   {
+class Trip {
   constructor(driver, passenger) {
     this.driverId = driver.id;
     this.passengerId = passenger.id;
-      this.id = tripId++;
+    this.id = tripId++;
     store.trips.push(this);
   }
   driver() {
     return store.drivers.find(driver => {
-      return driver.id == this.driverId;    });
+      return driver.id === this.driverId;
+    });
   }
   passenger() {
-    return store.passengers.find( passenger => {
-      return passenger.id == this.passengerId;    });
+    return store.passengers.find(passenger => {
+      return passenger.id === this.passengerId;
+    });
   }
 }
-  
