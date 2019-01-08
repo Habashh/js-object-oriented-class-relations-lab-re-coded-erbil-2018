@@ -37,8 +37,9 @@ trips() {
           });
   }
   drivers() {
-    return this.trips().map(trip=> {
-      return trip.driver(); });
+    return this.trips().map(trip => {
+      return trip.driver();
+    });
   }
 }
 class Trip   {
